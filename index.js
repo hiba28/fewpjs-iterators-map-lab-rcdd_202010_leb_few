@@ -10,13 +10,10 @@ const tutorials = [
   'what is the difference between event capturing and bubbling?',
   'what is JSONP?'
 ];
-// function uppercase(sentence){
-//   let words = []
-//   words = sentence.split("")
-//   let uppercased = words.map(word =>{
-//     word.charAt(0).toUpperCase()
-//   })
-// }
 const titleCased = () => {
-  return tutorials.map(elem => elem)
+  return tutorials.map(elem => {
+    let arr = elem.split(" ")
+    arr.forEach(e => e.charAt(0).toUpperCase())
+    return arr.join("")
+  })
 }
